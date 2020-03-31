@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {#  注意引入文件的方式 - 基础业务界面层 - finall不允许修改 #}
+    {% load staticfiles %}
+    <link rel="stylesheet" href="/static/layui/css/layui.css" media="all">
+    {#  设置网页标题图标  #}
+    <link rel="icon" type="image/x-icon" href="/static/media/icon.ico" />
+</head>
+<body>
+    <table id="st" lay-filter="test"></table>
+    <script src="/static/layui/layui.js"></script>
+    <h1>信息展示</h1>
+    <table class="layui-table">
+        <tr>
+            <th  class="layui-btn layui-btn-normal">姓名</th>
+            <th>年龄</th>
+            <th>性别</th>
+        </tr>
+        {% for data in student_list %}
+            <tr>
+                <td>{{ data.t_name }}</td>
+                <td>{{ data.t_age }}</td>
+                <td>{{ data.t_sex }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
