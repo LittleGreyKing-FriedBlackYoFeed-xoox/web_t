@@ -1,5 +1,6 @@
 from django.shortcuts import render,render_to_response
-from allModel import userModel
+from allModel.userdemo import userModel
+
 
 # 访问首页
 def index(request):
@@ -13,9 +14,9 @@ def register(request):
         usercode = request.POST.get("usercode",None)
         twz = userModel.AllmodelUser.objects.create(username=username, password=password, usercode=usercode)
         twz.save()
-    return render(request,"user/register.html")
+    return render(request, "user/register.html")
 
 # 展示用户信息
 def userList(request):
     user_list = userModel.AllmodelUser.objects.all()
-    return render(request,"user/showUser.html",{"userList":user_list})
+    return render(request, "user/showUser.html", {"userList":user_list})
