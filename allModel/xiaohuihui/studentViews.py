@@ -1,3 +1,5 @@
+from datetime import time
+
 from django.shortcuts import render,render_to_response,HttpResponse
 from allModel.xiaohuihui import studentModel
 
