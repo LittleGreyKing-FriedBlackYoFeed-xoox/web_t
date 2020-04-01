@@ -6,7 +6,7 @@
 #   * Remove `managed = False` lines if you wish to allow Django to create, modify, and delete the table
 # Feel free to rename the models, but don't rename db_table values or field names.
 from django.db import models
-
+# 辉哥的测试文件
 class Student(models.Model):
     t_name = models.CharField(max_length=255, blank=True, null=True)
     t_age = models.CharField(max_length=255, blank=True, null=True)
