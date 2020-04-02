@@ -4,7 +4,6 @@ from allModel.userdemo.userViews import index,register,userList
 from allModel.xiaohuihui.studentViews import student
 from django.conf import settings
 from django.conf.urls.static import static
-<<<<<<< Updated upstream
 from allModel.jz.jzViews import jz
 from allModel.zhangshuting.zzViews import students
 from allModel.zhaojiawei.zzView import rename
