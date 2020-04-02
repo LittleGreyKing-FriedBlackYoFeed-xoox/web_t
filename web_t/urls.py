@@ -8,6 +8,7 @@ from allModel.jz.jzViews import jz
 from allModel.zhangshuting.zzViews import students
 from allModel.zhaojiawei.zzView import rename
 from allModel.zhaojiawei.zzView import ZhuanYe
+from allModel.hanjia.hanjiaView import hanjia
 urlpatterns = [
     url('^$',index),
     url('admin/', admin.site.urls),
@@ -19,4 +20,5 @@ urlpatterns = [
     url('^shuting/$',students),
     url('^xxxx/$',rename),
     url('^ZhuanYe/$',ZhuanYe),
+    url('^hanjia/$',hanjia),
 ]+ static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
