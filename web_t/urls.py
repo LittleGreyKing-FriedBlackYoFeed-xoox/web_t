@@ -8,6 +8,7 @@ from allModel.jz.jzViews import jz
 from allModel.zhangshuting.zzViews import students
 from allModel.zhaojiawei.zzView import rename
 urlpatterns = [
+    url('^$',index),
     url('admin/', admin.site.urls),
     url('^index/$',index),
     url('^register/$',register),
