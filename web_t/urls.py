@@ -7,6 +7,7 @@ from django.conf.urls.static import static
 from allModel.jz.jzViews import jz
 from allModel.zhangshuting.zzViews import students
 from allModel.zhaojiawei.zzView import rename
+from allModel.zhaojiawei.zzView import ZhuanYe
 urlpatterns = [
     url('^$',index),
     url('admin/', admin.site.urls),
@@ -17,4 +18,5 @@ urlpatterns = [
     url('^jz/$',jz),
     url('^shuting/$',students),
     url('^xxxx/$',rename),
+    url('^ZhuanYe/$',ZhuanYe),
 ]+ static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
